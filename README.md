@@ -1,7 +1,8 @@
 # rb704
 My repo run in ros-noetic, ubuntu 20.04.
 
-You just need to install folder urg_node.
+## LiDAR HOKUYO
+If you want to use lidar hokuyo, you just need to install folder urg_node.
 
 Then, you need to install package "laser_proc" and "urg_c" by command:
     
@@ -14,3 +15,11 @@ To use lizar hokuyo and visual data in Rviz, you need to run command:
 
     source devel/setup.bash
     roslaunch urg_node urg_lidar.launch
+
+## Camera Realsense
+If you want to use and visual data in Rviz, you need to run command: 
+
+    source devel/setup.bash
+    roslaunch realsense2_camera demo_t265.launch
+
+You can set params of camera in 'rs_t265.launch': 'enable_fisheye' to visual fisheye image, 'enable_sync', ... 
